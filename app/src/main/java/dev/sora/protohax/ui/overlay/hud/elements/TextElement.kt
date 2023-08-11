@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 class TextElement : HudElement(HudManager.TEXT_ELEMENT_IDENTIFIER) {
 
-	private val textElementDefault = "Hello world!"
+	private val textElementDefault = "ProtoHax"
 
 	private var textValue by stringValue("Text", textElementDefault).listen {
 		this.width = paint.measureText(it)
