@@ -98,7 +98,7 @@ class HudManager(private val session: GameSession) : IConfigSection {
 
 	companion object {
 		const val TEXT_ELEMENT_IDENTIFIER = "Text"
-		const val MODULE_INDICATOR_ELEMENT_IDENTIFIER = "ModuleIndicator"
-		const val TARGET_INDICATOR_ELEMENT_IDENTIFIER = "TargetIndicator"
+		const val MODULE_INDICATOR_ELEMENT_IDENTIFIER = "ArrayList"
+		const val TARGET_INDICATOR_ELEMENT_IDENTIFIER = "TargetHUD"
 	}
 }
