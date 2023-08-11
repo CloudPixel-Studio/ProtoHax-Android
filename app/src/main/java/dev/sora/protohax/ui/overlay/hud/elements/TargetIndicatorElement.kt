@@ -28,7 +28,7 @@ class TargetIndicatorElement : HudElement(HudManager.TARGET_INDICATOR_ELEMENT_ID
 	}
 
 	private val paint = TextPaint().also {
-		it.color = Color.BLACK
+		it.color = Color.WHITE
 		it.isAntiAlias = true
 		it.textSize = 20 * MyApplication.density
 	}
