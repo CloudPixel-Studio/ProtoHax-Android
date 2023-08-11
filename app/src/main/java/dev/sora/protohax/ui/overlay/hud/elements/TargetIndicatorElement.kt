@@ -113,7 +113,7 @@ class TargetIndicatorElement : HudElement(HudManager.TARGET_INDICATOR_ELEMENT_ID
 		}
 		paint.setShadowLayer(shadowRadiusValue, 0f, 0f, Color.argb(shadowAlphaValue, 0, 0, 0))
 
-		canvas.drawRoundRect(0f, 0f, width, height, lineSpacing, lineSpacing, Paint().apply {
+		canvas.drawRoundRect(2f, 1f, width, height, lineSpacing, lineSpacing, Paint().apply {
 			color = Color.argb(0, 6, 16 88)
 		})
 
