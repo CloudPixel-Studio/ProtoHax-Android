@@ -11,11 +11,11 @@ dependencyResolutionManagement {
         mavenLocal()
         maven { url = 'https://maven.aliyun.com/repository/public' }
         maven { url = 'https://repo.hackpixel.net/maven_repo/' }
-        maven { url = 'https://raw.githubusercontent.com/Team-MoonMC/maven_repo/main/maven_repo/'}
+        maven { url = 'https://raw.githubusercontent.com/bcddfggghkstg/maven_repo/main/maven_repo/'}
         google()
         mavenCentral()
         maven {
-            url = 'https://maven.pkg.github.com/Team-MoonMC/ProtoHax'
+            url = 'https://maven.pkg.github.com/bcddfggghkstg/ProtoHax'
             credentials {
                 username = System.getenv("USERNAME_GITHUB")
                 password = System.getenv("TOKEN_GITHUB")
