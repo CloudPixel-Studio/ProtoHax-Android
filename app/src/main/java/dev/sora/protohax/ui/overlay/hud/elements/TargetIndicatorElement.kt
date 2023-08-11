@@ -28,7 +28,7 @@ class TargetIndicatorElement : HudElement(HudManager.TARGET_INDICATOR_ELEMENT_ID
 	}
 
 	private val paint = TextPaint().also {
-		it.color = Color.WHITE
+		it.color = Color.BLACK
 		it.isAntiAlias = true
 		it.textSize = 20 * MyApplication.density
 	}
@@ -102,7 +102,7 @@ class TargetIndicatorElement : HudElement(HudManager.TARGET_INDICATOR_ELEMENT_ID
 		val lineSpacing = (textSizeValue / 5) * MyApplication.density
 
 		height = lineHeight * 3 + lineSpacing * 6
-		val healthStr = "Health: ${currentHealth.roundToInt()} / ${maxHealth.roundToInt()}"
+		val healthStr = "${currentHealth.roundToInt()} / ${maxHealth.roundToInt()}"
 		val nameWidth = paint.measureText(name).coerceAtLeast(paint.measureText(healthStr))
 		width = nameWidth + lineSpacing * 4
 		if(blurValue) {
