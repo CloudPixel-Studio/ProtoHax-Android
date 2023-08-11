@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">ProtoHax</string>
 
-    <string name="mitm_connected">Connected to MITM proxy</string>
+    <string name="mitm_connected">Successfully Connected to MITM proxy</string>
     <string name="mitm_connected_launch">Launch App</string>
     <string name="mitm_disconnected">Disconnected from MITM proxy</string>
     <string name="request_overlay">We need overlay permission in order to display GUIs that you can interact in game</string>
