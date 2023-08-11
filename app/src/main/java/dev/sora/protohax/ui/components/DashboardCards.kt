@@ -51,7 +51,7 @@ fun CardLoginAlert(
 			border = BorderStroke(1.dp,color = MaterialTheme.colorScheme.outline),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(18.dp, 10.dp),
+                .padding(20.dp, 10.dp),
 			onClick = {
 				navigateToTopLevelDestination(TOP_LEVEL_DESTINATIONS.find { it.iconTextId == R.string.tab_accounts } ?: return@Card)
 			}
