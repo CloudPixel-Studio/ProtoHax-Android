@@ -97,10 +97,10 @@ class AppPickerActivity : ComponentActivity() {
 						onValueChange = { text = it },
 						placeholder = { Text(stringResource(R.string.dashboard_select_application_placeholder)) },
 						leadingIcon = { Icon(Icons.Filled.Search, null)},
-						shape = RoundedCornerShape(20.dp),
+						shape = RoundedCornerShape(10.dp),
 						modifier = Modifier
 							.fillMaxWidth()
-							.padding(8.dp, 0.dp),
+							.padding(6.dp, 0.dp),
 						colors = TextFieldDefaults.colors(
 							focusedIndicatorColor = Color.Transparent,
 							unfocusedIndicatorColor = Color.Transparent,
@@ -108,7 +108,7 @@ class AppPickerActivity : ComponentActivity() {
 						)
 					)
 
-					Spacer(modifier = Modifier.padding(4.dp))
+					Spacer(modifier = Modifier.padding(5.dp))
 				}
             },
             content = { innerPadding ->
@@ -150,7 +150,7 @@ class AppPickerActivity : ComponentActivity() {
 										MainActivity.targetPackage = packageName
 										finish()
 									}
-									.padding(16.dp, 10.dp),
+									.padding(18.dp, 10.dp),
 								verticalAlignment = Alignment.CenterVertically
 							) {
 								val icon = listIcons[packageName]
@@ -161,7 +161,7 @@ class AppPickerActivity : ComponentActivity() {
 										painter = icon,
 										contentDescription = packageName,
 										modifier = Modifier
-											.size(42.dp)
+											.size(45.dp)
 											.clip(RoundedCornerShape(8.dp))
 									)
 								}
