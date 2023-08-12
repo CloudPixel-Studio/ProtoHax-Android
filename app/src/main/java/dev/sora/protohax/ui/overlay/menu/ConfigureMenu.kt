@@ -133,7 +133,7 @@ class ConfigureMenu(private val overlayManager: OverlayManager) {
 			0,
 			PixelFormat.TRANSLUCENT
 		)
-		params.dimAmount = 0.5f
+		params.dimAmount = 0.9f
 		params.gravity = Gravity.CENTER or Gravity.CENTER
 		params.x = 0
 		params.y = 0
@@ -173,8 +173,8 @@ class ConfigureMenu(private val overlayManager: OverlayManager) {
 
 				AnimatedVisibility(
 					visible = displayState.value,
-					enter = fadeIn() + scaleIn(initialScale = 0.5f),
-					exit = fadeOut() + scaleOut(targetScale = 0.5f)
+					enter = fadeIn() + scaleIn(initialScale = 0.8f),
+					exit = fadeOut() + scaleOut(targetScale = 0.8f)
 				) {
 					// rotate the menu due to the menu doesn't look well on portrait orientation
 					Box(
@@ -237,7 +237,7 @@ class ConfigureMenu(private val overlayManager: OverlayManager) {
 			colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
 			modifier = Modifier
 				.fillMaxHeight(0.9f)
-				.fillMaxWidth(0.8f)
+				.fillMaxWidth(0.9f)
 				.clickableNoRipple { }
 		) {
 			Row {
@@ -290,9 +290,9 @@ class ConfigureMenu(private val overlayManager: OverlayManager) {
 						graph = navGraph,
 						enterTransition = {
 							if (stack.indexOf(this.initialState.destination.route ?: "") > stack.indexOf(this.targetState.destination.route ?: "")) {
-								slideInVertically { -it / 2 } + fadeIn()
+								slideInVertically { -it / 4 } + fadeIn()
 							} else {
-								slideInVertically { it / 2 } + fadeIn()
+								slideInVertically { it / 4 } + fadeIn()
 							}
 						},
 						exitTransition = {
