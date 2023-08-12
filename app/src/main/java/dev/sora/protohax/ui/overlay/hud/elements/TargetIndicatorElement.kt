@@ -33,9 +33,9 @@ class TargetIndicatorElement : HudElement(HudManager.TARGET_INDICATOR_ELEMENT_ID
 		it.textSize = 20 * MyApplication.density
 	}
 
-	override var height = 10f
+	override var height = 20f
 		private set
-	override var width = 40f
+	override var width = 60f
 		private set
 
 	private var health = 0.5f
@@ -113,11 +113,12 @@ class TargetIndicatorElement : HudElement(HudManager.TARGET_INDICATOR_ELEMENT_ID
 		}
 		paint.setShadowLayer(shadowRadiusValue, 0f, 0f, Color.argb(shadowAlphaValue, 0, 0, 0))
 
-		canvas.drawRoundRect(2f, 1f, width, height, lineSpacing, lineSpacing, Paint().apply {
+		canvas.drawRoundRect(1f, 1f, width, height, lineSpacing, lineSpacing, Paint().apply {
 			color = Color.argb(0, 6, 16, 88)
 		})
 
 		canvas.drawText(name, lineSpacing * 2, lineSpacing * 2 - paint.fontMetrics.ascent, paint)
+		canvas.drawText("Idk", lineSpacing * 2, lineSpacing * 2 - paint.fontMetrics.ascent, paint)
 		canvas.drawText(healthStr, lineSpacing * 2, lineSpacing * 3 + lineHeight - paint.fontMetrics.ascent, paint)
 
 		canvas.drawRoundRect(lineSpacing * 2, lineSpacing * 4 + lineHeight * 2, lineSpacing * 2 + health * nameWidth, lineSpacing * 4 + lineHeight * 3, lineSpacing, lineSpacing, Paint().apply {
