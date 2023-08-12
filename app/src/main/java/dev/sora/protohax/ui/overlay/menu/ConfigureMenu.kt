@@ -133,7 +133,7 @@ class ConfigureMenu(private val overlayManager: OverlayManager) {
 			0,
 			PixelFormat.TRANSLUCENT
 		)
-		params.dimAmount = 0.9f
+		params.dimAmount = 0.1f
 		params.gravity = Gravity.CENTER or Gravity.CENTER
 		params.x = 0
 		params.y = 0
