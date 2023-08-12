@@ -117,7 +117,7 @@ class TargetIndicatorElement : HudElement(HudManager.TARGET_INDICATOR_ELEMENT_ID
 			color = Color.argb(0, 0, 4, 89)
 		})
 
-		canvas.drawText(name, lineSpacing * 2, lineSpacing * 2 - paint.fontMetrics.ascent, paint)
+		canvas.drawText(name, lineSpacing * 2, lineSpacing * 2 + lineHeight - paint.fontMetrics.ascent, paint)
 		canvas.drawText("Text", lineSpacing * 2, lineSpacing * 3  + lineHeight - paint.fontMetrics.ascent, paint)
 		canvas.drawText(healthStr, lineSpacing * 2, lineSpacing * 4 + lineHeight - paint.fontMetrics.ascent, paint)
 
