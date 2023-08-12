@@ -114,12 +114,12 @@ class TargetIndicatorElement : HudElement(HudManager.TARGET_INDICATOR_ELEMENT_ID
 		paint.setShadowLayer(shadowRadiusValue, 0f, 0f, Color.argb(shadowAlphaValue, 0, 0, 0))
 
 		canvas.drawRoundRect(1f, 1f, width, height, lineSpacing, lineSpacing, Paint().apply {
-			color = Color.argb(0, 6, 16, 88)
+			color = Color.argb(255, 255, 255, 250)
 		})
 
 		canvas.drawText(name, lineSpacing * 2, lineSpacing * 2 - paint.fontMetrics.ascent, paint)
-		canvas.drawText("Idk", lineSpacing * 2, lineSpacing * 2 - paint.fontMetrics.ascent, paint)
-		canvas.drawText(healthStr, lineSpacing * 2, lineSpacing * 3 + lineHeight - paint.fontMetrics.ascent, paint)
+		canvas.drawText("Text", lineSpacing * 2, lineSpacing * 3 - paint.fontMetrics.ascent, paint)
+		canvas.drawText(healthStr, lineSpacing * 2, lineSpacing * 4 + lineHeight - paint.fontMetrics.ascent, paint)
 
 		canvas.drawRoundRect(lineSpacing * 2, lineSpacing * 4 + lineHeight * 2, lineSpacing * 2 + health * nameWidth, lineSpacing * 4 + lineHeight * 3, lineSpacing, lineSpacing, Paint().apply {
 			color = dev.sora.protohax.util.Color.HSBtoRGB(health / 3, 0.5f, 1f)
