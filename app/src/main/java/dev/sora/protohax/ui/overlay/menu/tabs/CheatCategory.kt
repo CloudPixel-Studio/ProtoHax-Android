@@ -79,7 +79,7 @@ fun CheatCategoryTab(
 				colors = CardDefaults.cardColors(containerColor = animateColorAsState(targetValue = if (expand) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.inversePrimary).value),
 				modifier = Modifier
 					.fillMaxWidth()
-					.padding(15.dp, 7.dp),
+					.padding(15.dp, 8.dp),
 				onClick = {
 					if (expand) {
 						expandModules.remove(module)
@@ -95,7 +95,7 @@ fun CheatCategoryTab(
 							fontWeight = if (expand) FontWeight.Bold else null,
 							modifier = Modifier
 								.fillMaxWidth()
-								.padding(0.dp, 0.dp, 60.dp, 0.dp)
+								.padding(0.dp, 0.dp, 80.dp, 0.dp)
 								.basicMarquee(iterations = Int.MAX_VALUE)
 								.align(Alignment.CenterStart)
 						)
@@ -163,10 +163,10 @@ private fun CheatShortcut(
 		verticalAlignment = Alignment.CenterVertically,
 		modifier = Modifier
 			.fillMaxWidth()
-			.height(30.dp)
+			.height(40.dp)
 	) {
 		Text(text = "Shortcut", modifier = Modifier.basicMarquee(iterations = Int.MAX_VALUE))
-		Spacer(modifier = Modifier.weight(1f))
+		Spacer(modifier = Modifier.weight(2f))
 		Checkbox(
 			checked = overlayManager.hasShortcut(module),
 			onCheckedChange = {
@@ -190,10 +190,10 @@ fun CheatValue(value: Value<*>, recomposeTrigger: () -> Unit) {
 			verticalAlignment = Alignment.CenterVertically,
 			modifier = Modifier
 				.fillMaxWidth()
-				.height(30.dp)
+				.height(40.dp)
 		) {
 			Text(text = value.name, modifier = Modifier.basicMarquee(iterations = Int.MAX_VALUE))
-			Spacer(modifier = Modifier.weight(1f))
+			Spacer(modifier = Modifier.weight(2f))
 			Checkbox(
 				checked = value.value,
 				onCheckedChange = {
