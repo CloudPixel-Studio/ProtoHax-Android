@@ -55,14 +55,14 @@ fun BoxScope.ConfigTab() {
 
 	LazyColumn {
 		item {
-			Spacer(modifier = Modifier.height(10.dp))
+			Spacer(modifier = Modifier.height(12.dp))
 		}
 		items(list, key = { it }) {
 			Card(
 				colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.inversePrimary),
 				modifier = Modifier
 					.fillMaxWidth()
-					.padding(15.dp, 7.dp)
+					.padding(15.dp, 8.dp)
 					.animateItemPlacement()
 			) {
 				Box(
@@ -72,7 +72,7 @@ fun BoxScope.ConfigTab() {
 						text = it,
 						modifier = Modifier
 							.fillMaxWidth()
-							.padding(0.dp, 0.dp, 60.dp, 0.dp)
+							.padding(0.dp, 0.dp, 80.dp, 0.dp)
 							.align(Alignment.CenterStart)
 							.basicMarquee(iterations = Int.MAX_VALUE)
 					)
@@ -85,8 +85,8 @@ fun BoxScope.ConfigTab() {
 								}
 							},
 							modifier = Modifier
-								.height(25.dp)
-								.width(30.dp)
+								.height(30.dp)
+								.width(35.dp)
 						) {
 							Icon(Icons.Filled.Publish, null)
 						}
@@ -108,7 +108,7 @@ fun BoxScope.ConfigTab() {
 			}
 		}
 		item {
-			Spacer(modifier = Modifier.height(10.dp))
+			Spacer(modifier = Modifier.height(12.dp))
 		}
 	}
 
